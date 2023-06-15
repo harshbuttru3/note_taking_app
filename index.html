@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Note Taking app</title>
+</head>
+<body>
+  <nav>
+    <div><h1 id="active">Notes</h1></div>
+    <div><a href="#"><h1>TO DO App</h1></a></div>
+
+  </nav>
+  <div id="container">
+  <div id="sidebar">
+    <div class="sideName">
+      <div id="imgaeContainer">
+      <img id="image" src="image1.jpeg" alt="">
+    </div>
+      <h3 id="nameInput" contenteditable="true"  >Name</h3></div>
+    <div class="notes" ><button id="display">Notes</button></div>
+    <div class="library"><button>library
+      
+    </button></div>
+  </div>
+  <div id="maincontent">
+    <div id="btnsNotMove">
+  <div id="Inputs">
+  <input type="text" id="noteTitle" class="notes" placeholder="My Heading" required>
+  
+  <textarea name="noteText" id="noteText" cols="100" rows="30" placeholder="write your note here" required></textarea>
+  </div>
+  <div id="btns">
+  <button id="clearbtn">Clear</button>
+  <button id="save">Save</button>
+</div>
+</div>
+</div>
+
+<div id="displayNotes">
+  <div id="nav2">
+  <h1>My Notes</h1>
+  <button id="clearNotes">Clear notes</button>
+</div>
+  <ul id="noteList"></ul>
+</div>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>

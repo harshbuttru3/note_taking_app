@@ -1,0 +1,177 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    background-color: #8ACDEA;
+    text-decoration: none;
+    overflow: hidden;
+}
+nav{
+   display: flex;
+   justify-content: space-between;
+   background-color: dimgrey;
+   padding: 10px;
+   height: 40px;
+   border-bottom: 3px solid black;
+}
+nav h1{
+    font-size: 30px;
+    margin-top: 0px;
+    color: white;
+}
+#active{
+  text-decoration: underline #8ACDEA;
+}
+h2{
+    margin: 10px;
+}
+#Inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 20px 0px 20px;
+    /* align-items: start; */
+  }
+  
+  .notes {
+    margin-bottom: 10px;
+    padding: 5px;
+   width: 622px;
+  }
+  #noteTitle{
+    background-color: #F7DAD9;
+    height: 30px;
+    border-radius: 16px 16px 0px 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    font-size: 30px;
+    border-bottom: 0px;
+  }
+  
+  #noteText {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 613px;
+    height: 347px;
+    background-color: #f7c5c3;
+    font-size: 18px;
+    border-radius: 0px 0px 16px 16px;
+    resize: none;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+
+    background-attachment: local;
+    background-image:
+        linear-gradient(to right, white 10px, transparent 10px),
+        linear-gradient(to left, white 10px, transparent 10px),
+        repeating-linear-gradient(white, white 30px, #ccc 30px, #ccc 31px, white 31px);
+    line-height: 31px;
+    padding: 8px 10px;
+  }
+  ::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+  #btns{
+    display: flex;
+    justify-content: end;
+    margin-right: 5px;
+  }
+  button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  #container{
+    display: flex;
+  }
+  #sidebar{
+    display: block;
+    margin: 0;
+    width: 20vw;
+    height: 90.7vh;
+    background-color: #8ACDEA;
+    border-right: 5px solid black;
+    z-index: 111; 
+  }
+  #sidebar img{
+   width: 50px;
+   border-radius: 50%;
+  }
+  #maincontent{
+    margin: 50px auto 0 auto;
+    width: 100%;
+    z-index: 0;
+  }
+  #displayNotes{
+    background-color: rgb(177, 100, 228);
+    width: 80vw;
+    height: 100vh;
+    position: absolute;
+    right: 0; 
+    top: 63px;
+    display: none;
+    z-index: 100;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+  }
+  #displayNotes h1{
+    text-align: center;
+  }
+  #btnsNotMove{
+    width: 622px;
+    margin: auto;
+  }
+  #nav2{
+    display: flex;
+    justify-content: space-between;
+    margin: 4%;
+  }
+  #displayNotes button{
+    justify-self: end;
+  }
+
+#displayNotes button:hover{
+  background-color: red;
+}
+  .note-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 80px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.note-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.note-title {
+    margin: 0;
+    flex: 1;
+}
+
+.delete-btn {
+    background-color: #52bdff;
+    color: #000000;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
