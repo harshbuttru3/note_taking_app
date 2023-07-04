@@ -122,10 +122,29 @@ const imageUrls = [
 
 let currentIndex = 0;
 
-imageContainer.addEventListener('click', (event) => {
+// Check if there's a saved image index in localStorage
+if (localStorage.getItem("currentIndex")) {
+  currentIndex = parseInt(localStorage.getItem("currentIndex"));
+  image.src = imageUrls[currentIndex];
+} else {
+  image.src = imageUrls[currentIndex];
+}
+
+imageContainer.addEventListener("click", (event) => {
   if (event.target === image) {
     currentIndex = (currentIndex + 1) % imageUrls.length;
     const nextImageUrl = imageUrls[currentIndex];
     image.src = nextImageUrl;
+
+    // Save the current index in localStorage
+    localStorage.setItem("currentIndex", currentIndex.toString());
+  }
+});
+
+window.addEventListener("load", () => {
+  // Check if there's a saved image index in localStorage
+  if (localStorage.getItem("currentIndex")) {
+    currentIndex = parseInt(localStorage.getItem("currentIndex"));
+    image.src = imageUrls[currentIndex];
   }
 });
