@@ -70,6 +70,16 @@ notebtn.addEventListener("click", () => {
     x.style.display = "none";
   }
 });
+let notebtn = document.getElementById("displayMobile");
+notebtn.addEventListener("click", () => {
+  let x = document.getElementById("displayNotes");
+  // x.style.display = "block"
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+});
 
 document.getElementById("clearbtn").addEventListener("click", () => {
   titleText.value = "";
