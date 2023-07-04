@@ -179,3 +179,17 @@ h2{
     padding: 5px 10px;
     cursor: pointer;
 }
+.mobile{
+  display: none;
+}
+@media screen and (max-width: 768px){
+  .btns{
+    position: relative;
+  }
+  .mobile{
+    display: block;
+    position: absolute;
+    left: 10px;
+    
+  }
+}
